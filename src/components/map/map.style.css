@@ -1,0 +1,13 @@
+.map_container {
+	width: 100vw;
+	max-height: 100vh;
+}
+
+.leaflet-container {
+	height: 100vh;
+	z-index: 9;
+}
+
+.leaflet-control-zoom {
+	display: none;
+}
