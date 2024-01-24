@@ -35,6 +35,9 @@
 - [**Tailwindcss**](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
 - [**Leaflet**](https://leafletjs.com/) - An open-source JavaScript library for mobile-friendly interactive maps.
 - [**fontsource**](https://fontsource.org/) - Self-host Open Source fonts in neatly bundled NPM packages.
+- [**Jest**](https://jestjs.io/) - Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+- [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/) - Simple and complete React DOM testing utilities that encourage good testing practices.
+- [**Bun**](https://bun.sh/) - All-in-one JavaScript runtime & toolkit designed for speed, complete with a bundler, test runner, and Node.js-compatible package manager..
 
 ## 🚀 Getting Started
 
@@ -89,6 +92,7 @@ pnpm dev
 | ⚙️  | `dev` or `start` | Starts local dev server at `localhost:3000`.                  |
 | ⚙️  | `build`          | Build your production site to `./dist/`.                      |
 | ⚙️  | `preview`        | Preview your build locally, before deploying.                 |
+| ⚙️  | `test`           | Run all your tests                                            |
 
 ## 📝 How the project works
 
