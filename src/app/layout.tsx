@@ -20,6 +20,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<head>
 				<link rel='stylesheet' href='https://unpkg.com/leaflet@1.0.1/dist/leaflet.css' />
+				<title>TOTS TEST | Matias Santillan</title>
 			</head>
 			<body className={inter.className}>{children}</body>
 		</html>

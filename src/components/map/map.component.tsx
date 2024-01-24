@@ -3,14 +3,32 @@ import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 
-import { LayersControl, MapContainer, Marker, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer } from 'react-leaflet'
 
-export default function Map() {
+import { Country } from '@/interfaces/country.interface'
+import { LatLngExpression } from 'leaflet'
+import { MarkerComponent } from './marker/marker.component'
+import { useMemo } from 'react'
+
+const MAP_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+export default function Map({ countries }: { countries: Country[] | undefined }) {
+	const latLong: LatLngExpression = useMemo(() => {
+		if (!!countries) {
+			const countriesLengthKey = countries.length - 1
+			return [countries[countriesLengthKey].lat, countries[countriesLengthKey].long]
+		}
+
+		return [0, 0]
+	}, [countries])
+
 	return (
 		<div className='map_container'>
-			<MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className='w-full'>
-				<TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
-				<Marker position={[51.505, -0.09]} />
+			<MapContainer center={latLong} zoom={5} className='w-full'>
+				<TileLayer url={MAP_URL} />
+
+				{countries?.map((country) => {
+					return <MarkerComponent key={country.code} country={country} />
+				})}
 			</MapContainer>
 		</div>
 	)
