@@ -17,6 +17,7 @@
     <a href="#-commands">
         Commands
     </a>
+     <span>&nbsp;✦&nbsp;</span>
     <a href="#-how-the-project-works">
         How the project works
     </a>
