@@ -6,19 +6,22 @@
 </div>
 
 <div align="center">
-    <a href="#" target="_blank">
+    <a href="https://tots-test.vercel.app" target="_blank">
         Preview
     </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#getting-started">
+    <a href="#-getting-started">
         Getting Started
     </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#commands">
+    <a href="#-commands">
         Commands
     </a>
+    <a href="#-how-the-project-works">
+        How the project works
+    </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#license">
+    <a href="#-license">
         License
     </a>
     <span>&nbsp;✦&nbsp;</span>
@@ -86,7 +89,7 @@ pnpm dev
 | ⚙️  | `build`          | Build your production site to `./dist/`.                      |
 | ⚙️  | `preview`        | Preview your build locally, before deploying.                 |
 
-## 📝 How the project works (Funcionalities)
+## 📝 How the project works
 
 This project, in its initial stage, loads the map with information requested on the server (SSR) allowing us to preload data provided in the [JSON](./src/mock/countries.json) format and the extra information obtained from the [GraphQL API](https://countries.trevorblades.com).
 
